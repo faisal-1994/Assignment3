@@ -1,0 +1,27 @@
+.mainDiv{
+    height: 200px;
+    width: 1000px;
+    background-color: aqua;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
+}
+
+
+.subDiv{
+    background-color: blueviolet;
+    height: 100px;
+    width: 150px;
+
+
+}
+
+input{
+    border-radius: 20px;
+    border-style:double;
+    margin-top: 10px;
+    background-color: rgb(171, 222, 235);
+}

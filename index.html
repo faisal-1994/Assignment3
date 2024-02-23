@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="mainDiv">
+        <div class="subDiv">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, incidunt.</div>
+        <div class="subDiv">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, incidunt.</div>
+        <div class="subDiv">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, incidunt.</div>
+        <div class="subDiv">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, incidunt.</div>
+    </div>
+    <br>
+    <button onclick="FetchGetData()">Fetch</button> <br><br>
+    <textarea name="" id="textarea" cols="5" rows="5"></textarea>
+
+    <script>
+        // let array = [ "farid", "faisal", "fahim", "faiza"];
+        // array.map((item, index)=>{
+        //    console.log( index+ ":" +item)
+        // })
+        
+        function FetchGetData (){
+             let url = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+            
+            let requestOption = {method:'GET'};
+            
+            let textarea= document.getElementById('textarea');
+            let data = fetch(url,  requestOption)
+            .then(response=>response.json())
+            .then(result=> textarea.innerText=JSON.stringify(result))
+            .catch(error=> console.log("error:"+ error))
+
+           
+        }
+
+    </script>
+</body>
+</html>
